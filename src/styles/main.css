@@ -13,17 +13,32 @@ a.project {
     display: block;
 }
 
-.content {
-    margin: 0 auto;
-    max-width: 600px;
-    padding-left: 5px;
-    padding-top: 5px;
-    width: 100%;
+article {
+    margin-bottom: 10px;
 }
 
-section.header {
+.content {
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+header.header {
     align-items: center;
     display: flex;
+}
+
+section {
+    margin-top: 10px;
+}
+
+section > header {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 5px;
+}
+section > header h2 {
+    margin: 0;
 }
 
 img.gravatar {
@@ -48,5 +63,12 @@ h1.name span.fehskens {
     .content {
         padding-left: 15px;
         padding-right: 15px;
+        width: calc(100% - 30px);
+    }
+}
+
+@media(min-width: 600px) {
+    .content {
+        width: 600px;
     }
 }
