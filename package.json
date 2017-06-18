@@ -1,0 +1,15 @@
+{
+  "name": "fehskens.com",
+  "version": "1.0.0",
+  "description": "The personal site of me",
+  "main": "src/index.html",
+  "repository": "https://github.com/gonzofish/fehskens.com",
+  "author": "Matt Fehskens <matt.fehskens@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "scripts": {
+    "start": "lite-server"
+  }
+}
