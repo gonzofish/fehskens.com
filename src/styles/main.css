@@ -59,6 +59,13 @@ article {
     margin-bottom: 10px;
 }
 
+ul {
+    padding-left: 25px;
+}
+ul > li {
+    padding-left: 10px;
+}
+
 @media(max-width: 599px) {
     .content {
         padding-left: 15px;
