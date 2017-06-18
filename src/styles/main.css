@@ -43,3 +43,10 @@ h1.name span.matt {
 h1.name span.fehskens {
     color: rgba(0, 0, 0, 0.52);
 }
+
+@media(max-width: 599px) {
+    .content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
