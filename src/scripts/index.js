@@ -7,7 +7,19 @@
     headerArray.forEach(function (header) {
         header.addEventListener('mouseover', randomizeHeaderColor);
         header.addEventListener('mouseout', resetHeaderColor);
+
+        header.addEventListener('touchstart', touchHeaderColor);
     });
+
+    function touchHeaderColor(event) {
+        var header = event.target;
+
+        if (event.target.classList.contains('randomizing')) {
+            resetHeaderColor(event);
+        } else {
+            randomizeHeaderColor(event);
+        }
+    }
 
     function randomizeHeaderColor(event) {
         var header = event.target;
