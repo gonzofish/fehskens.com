@@ -50,9 +50,11 @@ section > header {
     background-color: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 5px;
+    transition: background-color 500ms ease;
 }
 section > header h2 {
     margin: 0;
+    pointer-events: none;
 }
 
 article {
