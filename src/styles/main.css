@@ -8,6 +8,11 @@ body {
 a {
     color: #f3a;
     font-weight: bold;
+    padding: 1px;
+    transition: background-color 500ms ease;
+}
+a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 a.project {
     display: block;
