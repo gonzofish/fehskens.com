@@ -68,7 +68,7 @@ aside {
     border-left: 0.5em solid rgba(0, 0, 0, 0.5);
     font-style: italic;
     margin: 0.75em;
-    padding: 0.75em 0.25em;
+    padding: 0.75em 0.5em;
 }
 
 article {
