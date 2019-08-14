@@ -31,7 +31,20 @@
         </h1>
       </header>
 
-      <!-- talc-content -->
+      <h2>Posts</h2>
+
+      <ul class="posts">
+        <!-- talc:for:files -->
+        <li>
+          <a href="<!-- talc:filename -->" title="<!-- talc:title -->">
+            <!-- talc:title -->
+          </a>
+          <span class="date">
+            <!-- talc:publish_date-->
+          </span>
+        </li>
+        <!-- talc:endfor -->
+      </ul>
     </div>
   </body>
 </html>
