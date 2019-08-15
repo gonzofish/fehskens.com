@@ -6,7 +6,7 @@ publish_date: 2019-08-14 22:48:00
 
 ### OSS and Bird Carpentry
 
-I recently heard someone mention that some forays into open-source software (OSS) are like building a birdhouse. When someone sets out to build a birdhouse t's not so much about making the best or the most innovative birdhouse of all time. No, building a birdhouse is about doing the activity for the sake of doing it. It's about learning how to do it. It's about indulging in the art of craftsmanship.
+I recently heard someone mention that some forays into open-source software (OSS) are like building a birdhouse. When someone sets out to build a birdhouse it's not so much about making the best or the most innovative birdhouse of all time. No, building a birdhouse is about doing the activity for the sake of doing it. It's about learning how to do it. It's about indulging in the art of craftsmanship.
 
 Some OSS is just that. It's not so much about becoming the greatest library out there, but more about taking time to build something for fun. Recently (the last 26 days to be exact), I've been building my own birdhouse in the form of a static site generator called [Talc](https://github.com/gonzofish/talc).
 
