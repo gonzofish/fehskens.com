@@ -88,6 +88,24 @@ ul.posts > li > .date {
   margin-left: 0.25rem;
 }
 
+article > * {
+  letter-spacing: 1px;
+}
+article > header {
+  margin-bottom: 1rem;
+}
+article > header > h2 {
+  font-size: 2rem;
+  letter-spacing: -0.1rem;
+  margin: 0;
+}
+article > header > .dateline {
+  letter-spacing: 0;
+}
+article > h3 {
+  margin: 0;
+}
+
 @media (max-width: 599px) {
   .content {
     padding-left: 15px;
