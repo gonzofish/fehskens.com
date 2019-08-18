@@ -1,5 +1,10 @@
- {
-     "files": [ "./src/**/*.{css,html,js}" ],
-     "port": 8000,
-     "server": { "baseDir": "src" }
- }
+{
+  "files": ["./src/**/*.{css,html,js}", "./blog/**/*.{css,html,js}"],
+  "port": 8000,
+  "server": {
+    "baseDir": "src",
+    "routes": {
+      "/blog": "posts-html"
+    }
+  }
+}
