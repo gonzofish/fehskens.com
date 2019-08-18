@@ -1,50 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>fehskens.com - Matt Fehskens</title>
 
-    <meta name="charset" content="utf8" />
-    <meta
-      name="description"
-      content="The resume/portfolio site of Matt Fehskens"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <title>fehskens.com - Matt Fehskens</title>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-    />
-    <link href="../styles/main.css" rel="stylesheet" />
-  </head>
+  <meta name="charset" content="utf8" />
+  <meta name="description" content="The resume/portfolio site of Matt Fehskens" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <body>
-    <div class="content">
-      <header class="header">
-        <img
-          alt="It's a picture of me!"
-          class="gravatar"
-          src="https://s.gravatar.com/avatar/f2290d7e27c4ca1d49ed5b8393d2fd1c?s=100"
-        />
-        <h1 class="name">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  <link href="../styles/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="content">
+    <header class="header">
+      <img alt="It's a picture of me!" class="gravatar"
+        src="https://s.gravatar.com/avatar/f2290d7e27c4ca1d49ed5b8393d2fd1c?s=100" />
+      <h1 class="name">
+        <a href="/" title="fehskens.com home">
           <span class="matt">matt</span>
           <span class="fehskens">fehskens</span>
-        </h1>
-      </header>
+        </a>
+      </h1>
+    </header>
 
-      <h2>Posts</h2>
+    <h2>Posts</h2>
 
-      <ul class="posts">
-        <!-- talc:for:files -->
-        <li>
-          <a href="<!-- talc:filename -->" title="<!-- talc:title -->">
-            <!-- talc:title -->
-          </a>
-          <span class="date">
-            <!-- talc:publish_date-->
-          </span>
-        </li>
-        <!-- talc:endfor -->
-      </ul>
-    </div>
-  </body>
+    <ul class="posts">
+      <!-- talc:for:files -->
+      <li>
+        <a href="<!-- talc:filename -->" title="<!-- talc:title -->">
+          <!-- talc:title -->
+        </a>
+        <span class="date">
+          <!-- talc:publish_date-->
+        </span>
+      </li>
+      <!-- talc:endfor -->
+    </ul>
+  </div>
+</body>
+
 </html>

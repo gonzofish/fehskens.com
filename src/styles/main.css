@@ -93,6 +93,7 @@ article > * {
 }
 article > header {
   margin-bottom: 1rem;
+  padding-top: 0.5rem;
 }
 article > header > h2 {
   font-size: 2rem;
