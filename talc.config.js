@@ -1,7 +1,7 @@
 module.exports = {
+  built: "posts-html",
   dateFormat: "M/d/yyyy hh:mm a",
   index: "talc/index.html",
-  input: "posts",
-  output: "posts-html",
+  published: "posts",
   template: "talc/post.html"
 };
