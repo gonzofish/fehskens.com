@@ -24,7 +24,9 @@ That third point is _super_ important. Not to get on a soap box, but the web is 
 The basic way of using a `label` is this:
 
 ```html
-<label for="title">Title:</label> <input id="title" name="title" type="text" />
+<label for="title">Title:</label>
+
+<input id="title" name="title" type="text" />
 ```
 
 The `for` attribute of the label must be the `id` of the control it is meant to label. It's that simple.
