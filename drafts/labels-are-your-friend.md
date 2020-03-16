@@ -25,7 +25,6 @@ The basic way of using a `label` is this:
 
 ```html
 <label for="title">Title:</label>
-
 <input id="title" name="title" type="text" />
 ```
 
