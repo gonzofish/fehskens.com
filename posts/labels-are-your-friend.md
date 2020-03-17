@@ -1,6 +1,7 @@
 ---
-title: Keeping Labels Stylish
+title: Make Yours Forms Able with Labels
 create_date: 2020-03-15 15:27:45
+publish_date: 2020-03-16 22:29:44
 ---
 
 ### Forms Forever
@@ -51,3 +52,14 @@ But there's a nice trick that can be used when nesting the control inside the la
 ```
 
 If the item is nested, it doesn't need an `id` and the `label` doesn't need a `for` attribute because the association between the `label` and the control is implicit.
+
+### And Always Let Your Labels Be Your Guide
+
+That's it. With just one tag you can drastically improve the capabilities of your forms. Adding styling obviously helps and can bring some freshness to your forms. [Here's a simple example on Codepen](https://codepen.io/gonzofish/pen/poJVGEo):
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="gonzofish" data-slug-hash="poJVGEo" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Label Able">
+  <span>See the Pen <a href="https://codepen.io/gonzofish/pen/poJVGEo">
+  Label Able</a> by Matt Fehskens (<a href="https://codepen.io/gonzofish">@gonzofish</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
