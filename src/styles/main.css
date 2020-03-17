@@ -111,6 +111,12 @@ article > h3 {
   margin: 0;
 }
 
+pre {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 0.5em 1em 0.25em;
+}
+
 @media (max-width: 599px) {
   .content {
     padding-left: 15px;
