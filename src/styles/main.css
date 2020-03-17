@@ -111,7 +111,7 @@ article > h3 {
   margin: 0;
 }
 
-pre {
+pre.disabled {
   background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
   padding: 0.5em 1em 0.25em;
