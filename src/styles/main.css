@@ -3,6 +3,12 @@ body {
   font: 14px "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
+  transition: 500ms ease-in-out;
+}
+
+body.nightmode {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
 }
 
 a {
@@ -45,6 +51,25 @@ h1.name:hover span.matt {
 }
 h1.name span.fehskens {
   color: rgba(0, 0, 0, 0.52);
+  transition: 500ms ease-in color;
+}
+
+header label.nightmode-checkbox {
+  font-size: 200%;
+  margin-left: 0.25em;
+  position: relative;
+}
+
+header label.nightmode-checkbox input[type="checkbox"] {
+  bottom: 0;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 
 img.gravatar {
@@ -111,10 +136,17 @@ article > h3 {
   margin: 0;
 }
 
-pre.disabled {
+body.nightmode {
   background-color: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: 0.5em 1em 0.25em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+body.nightmode h1.name span.fehskens {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+body.nightmode section > header {
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 @media (max-width: 599px) {
