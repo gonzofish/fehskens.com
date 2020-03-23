@@ -1,6 +1,6 @@
 body {
   color: rgba(0, 0, 0, 0.85);
-  font: 14px "Open Sans", sans-serif;
+  font: 16px "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
   transition: 500ms ease-in-out;
@@ -58,6 +58,14 @@ header label.nightmode-checkbox {
   font-size: 200%;
   margin-left: 0.25em;
   position: relative;
+}
+
+header label.nightmode-checkbox .day {
+  display: inline-block;
+}
+
+header label.nightmode-checkbox .night {
+  display: none;
 }
 
 header label.nightmode-checkbox input[type="checkbox"] {
@@ -145,20 +153,41 @@ body.nightmode h1.name span.fehskens {
   color: rgba(255, 255, 255, 0.85);
 }
 
+body.nightmode img.gravatar {
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.25);
+}
+
 body.nightmode section > header {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
+body.nightmode header label.nightmode-checkbox .day {
+  display: none;
+}
+
+body.nightmode header label.nightmode-checkbox .night {
+  display: inline-block;
+}
+
 @media (max-width: 599px) {
   .content {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: calc(100% - 30px);
+    padding: 1em;
+    width: calc(100% - 2em);
   }
 }
 
 @media (min-width: 600px) {
   .content {
-    width: 600px;
+    max-width: calc(100% - 2em);
+    padding: 1em;
+    width: calc(800px - 2em);
+  }
+}
+
+@media (min-width: 1900px) {
+  .content {
+    max-width: calc(100% - 3em);
+    padding: 1em;
+    width: calc(1000px - 3em);
   }
 }

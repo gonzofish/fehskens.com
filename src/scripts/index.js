@@ -5,6 +5,7 @@
     var sectionHeaders = document.querySelectorAll("section > header");
     var headerArray = Array.prototype.slice.call(sectionHeaders);
     var nightmode = document.querySelector("input#nightmode");
+    var storage = window.localStorage;
 
     headerArray.forEach(function(header) {
       header.addEventListener("mouseover", randomizeHeaderColor);
@@ -14,6 +15,10 @@
     });
 
     nightmode.addEventListener("click", toggleNightMode);
+
+    if (storage && storage.getItem("nightmode") === "night") {
+      nightmode.dispatchEvent(new Event("click"));
+    }
   };
 
   function touchHeaderColor(event) {
@@ -79,15 +84,19 @@
   }
 
   function toggleNightMode(event) {
-    var target = event.target;
-    var icon = target.previousElementSibling;
+    setNightMode(event.target.checked);
+  }
+
+  function setNightMode(checked) {
+    var storage = window.localStorage;
+    var mode = "";
 
     document.body.classList.toggle("nightmode");
 
-    if (target.checked) {
-      icon.innerHTML = "🌙";
-    } else {
-      icon.innerHTML = "🌞";
+    if (checked) {
+      mode = "night";
     }
+
+    storage.setItem("nightmode", mode);
   }
 })();
