@@ -6,6 +6,11 @@ body {
   transition: 500ms ease-in-out;
 }
 
+body.hide-transitions,
+body.hide-transitions * {
+  transition: none !important;
+}
+
 body.nightmode {
   background-color: rgba(0, 0, 0, 0.85);
   color: #fff;

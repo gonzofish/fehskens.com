@@ -17,8 +17,12 @@
     nightmode.addEventListener("click", toggleNightMode);
 
     if (storage && storage.getItem("nightmode") === "night") {
-      nightmode.dispatchEvent(new Event("click"));
+      setNightMode(true);
     }
+
+    setTimeout(() => {
+      document.body.classList.remove("hide-transitions");
+    });
   };
 
   function touchHeaderColor(event) {
