@@ -2,6 +2,7 @@
 title: Make Your Forms Able with Labels
 create_date: 2020-03-15 15:27:45
 publish_date: 2020-03-16 22:29:44
+tags: html, a11y
 ---
 
 ### Forms Forever
