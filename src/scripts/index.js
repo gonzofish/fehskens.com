@@ -1,11 +1,16 @@
 "use strict";
 
 (function() {
+  var storage = window.localStorage;
+
+  if (storage && storage.getItem("nightmode") === "night") {
+    setNightMode(true);
+  }
+
   window.onload = function() {
     var sectionHeaders = document.querySelectorAll("section > header");
     var headerArray = Array.prototype.slice.call(sectionHeaders);
     var nightmode = document.querySelector("input#nightmode");
-    var storage = window.localStorage;
 
     headerArray.forEach(function(header) {
       header.addEventListener("mouseover", randomizeHeaderColor);
@@ -15,10 +20,6 @@
     });
 
     nightmode.addEventListener("click", toggleNightMode);
-
-    if (storage && storage.getItem("nightmode") === "night") {
-      setNightMode(true);
-    }
 
     setTimeout(() => {
       document.body.classList.remove("hide-transitions");
