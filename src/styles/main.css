@@ -134,13 +134,15 @@ article > * {
   letter-spacing: 1px;
 }
 article > header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   margin-bottom: 1rem;
-  padding-top: 0.5rem;
+  padding: 0 0 0.5em;
 }
 article > header > h2 {
   font-size: 2rem;
   letter-spacing: -0.1rem;
   margin: 0;
+  padding-top: 0.5em;
 }
 article > header > .dateline {
   letter-spacing: 0;
@@ -148,14 +150,20 @@ article > header > .dateline {
 article > h3 {
   margin: 0;
 }
+article > h3 + p {
+  margin-top: 0.5em;
+}
+article > p + h3 {
+  margin-top: 1em;
+}
 
 body.nightmode {
   background-color: rgba(0, 0, 0, 0.85);
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 body.nightmode h1.name span.fehskens {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 body.nightmode img.gravatar {
@@ -172,6 +180,19 @@ body.nightmode header label.nightmode-checkbox .day {
 
 body.nightmode header label.nightmode-checkbox .night {
   display: inline-block;
+}
+
+body.nightmode article > header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.nightmode article > header > h2 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+body.nightmode article > h3 {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bolder;
 }
 
 @media (max-width: 599px) {
