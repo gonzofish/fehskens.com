@@ -15,6 +15,6 @@
     "start": "lite-server"
   },
   "dependencies": {
-    "talc": "^1.0.0-alpha.5"
+    "talc": "^1.0.0-alpha.6"
   }
 }
