@@ -2,6 +2,7 @@
 title: Building a Birdhouse
 create_date: 2019-08-14 22:10:33
 publish_date: 2019-08-14 22:48:00
+tags: talc
 ---
 
 ### OSS and Bird Carpentry
