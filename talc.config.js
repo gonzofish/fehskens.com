@@ -27,6 +27,7 @@ const createTagPages = (files, template) => {
     output.push({
       filename: `tags/${tag}.html`,
       files: tagFiles,
+      metadata: { tag },
       template: "tag.html"
     });
   }
