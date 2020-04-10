@@ -1,8 +1,8 @@
 ---
 title: JavaScript Arrays - The Basics
 create_date: 2020-04-05 22:01:15
-tags: arrays, javascript
-publish_date: 2020-04-09 22:50:25
+tags: arrays, javascript, tutorial
+publish_date: 2020-04-09 22:51:06
 ---
 
 Programming is all about processing lists. Day in and day out, programmers work on list after list of data. In JavaScript these lists are called "arrays". This post discusses  the basics of arrays, including how to create them and the fundementals of working with them.
