@@ -39,6 +39,12 @@ a.project {
 header.header {
   align-items: center;
   display: flex;
+  justify-content: space-between;
+}
+
+header.header .header-title {
+  align-items: center;
+  display: flex;
 }
 
 h1.name {
@@ -46,6 +52,7 @@ h1.name {
   font-weight: normal;
   letter-spacing: -3px;
   margin: 0;
+  margin-left: 0.25em;
 }
 h1.name span.matt {
   color: #3af;
@@ -62,6 +69,7 @@ h1.name span.fehskens {
 header label.nightmode-checkbox {
   font-size: 200%;
   margin-left: 0.25em;
+  margin-right: 0.25em;
   position: relative;
 }
 
