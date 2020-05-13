@@ -6,7 +6,7 @@ const build = () => {
   const outputDir = path.join(root, "dist");
   const blogDir = path.join(outputDir, "blog");
   const srcDir = path.join(root, "src");
-  const talcDir = path.join(root, "posts-html");
+  const talcDir = path.join(root, "blog-html");
 
   copyDir(srcDir, outputDir);
   copyDir(talcDir, blogDir);
@@ -31,7 +31,7 @@ const copyDir = (src, dest) => {
   }
 };
 
-const checkIsDir = dir => fs.lstatSync(dir).isDirectory();
+const checkIsDir = (dir) => fs.lstatSync(dir).isDirectory();
 
 const copyFile = (source, dest) => {
   const contents = fs.readFileSync(source, { encoding: "utf8" });
@@ -39,7 +39,7 @@ const copyFile = (source, dest) => {
   fs.writeFileSync(dest, contents, { encoding: "utf8" });
 };
 
-const createDir = dir => {
+const createDir = (dir) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
