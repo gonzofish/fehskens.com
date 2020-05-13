@@ -1,64 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>fehskens.com - Blog</title>
+  <head>
+    <title>fehskens.com - Blog</title>
 
-  <meta name="charset" content="utf8" />
-  <meta name="description" content="The resume/portfolio site of Matt Fehskens" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- talc:import:listhead.html -->
 
-  <meta property="og:image" content="https://s.gravatar.com/avatar/f2290d7e27c4ca1d49ed5b8393d2fd1c?s=200" />
-  <meta property="og:title" content="The Blog of Matt Fehskens" />
-  <meta property="og:url" content="http://fehskens.com/blog" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@gonzofish" />
-  <meta name="twitter:image" content="https://s.gravatar.com/avatar/f2290d7e27c4ca1d49ed5b8393d2fd1c?s=200" />
-  <meta name="twitter:site" content="@gonzofish" />
-  <meta name="twitter:title" content="The Blog of Matt Fehskens" />
+      <h2>Posts</h2>
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-  <link href="../styles/main.css" rel="stylesheet" />
-</head>
+      <ul class="posts">
+        <!-- talc:for:files -->
+        <li>
+          <a href="<!-- talc:filename -->" title="<!-- talc:title -->">
+            <!-- talc:title -->
+          </a>
+          <span class="date">
+            <!-- talc:publish_date-->
+          </span>
+        </li>
+        <!-- talc:endfor -->
+      </ul>
 
-<body class="hide-transitions">
-  <div class="content">
-    <header class="header">
-      <img alt="It's a picture of me!" class="gravatar"
-        src="https://s.gravatar.com/avatar/f2290d7e27c4ca1d49ed5b8393d2fd1c?s=100" />
-      <h1 class="name">
-        <a href="/" title="fehskens.com home">
-          <span class="matt">matt</span>
-          <span class="fehskens">fehskens</span>
-        </a>
-      </h1>
+      <a href="tags.html" title="See posts by tag">See posts by tag</a>
+    </div>
 
-      <label aria-label="Toggle night mode" class="nightmode-checkbox">
-          <span class="day">🌞</span>
-          <span class="night">🌙</span>
-          <input id="nightmode" type="checkbox">
-      </label>
-    </header>
-
-    <h2>Posts</h2>
-
-    <ul class="posts">
-      <!-- talc:for:files -->
-      <li>
-        <a href="<!-- talc:filename -->" title="<!-- talc:title -->">
-          <!-- talc:title -->
-        </a>
-        <span class="date">
-          <!-- talc:publish_date-->
-        </span>
-      </li>
-      <!-- talc:endfor -->
-    </ul>
-
-    <a href="tags.html" title="See posts by tag">See posts by tag</a>
-  </div>
-
-  <script src="../scripts/index.js"></script>
-</body>
-
-</html>
+    <!-- talc:import:footer.html -->
