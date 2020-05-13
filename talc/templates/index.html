@@ -6,22 +6,18 @@
 
     <!-- talc:import:listhead.html -->
 
-      <h2>Posts</h2>
+      <section>
+        <header>
+          <h2>All Posts</h2>
+        </header>
 
-      <ul class="posts">
-        <!-- talc:for:files -->
-        <li>
-          <a href="<!-- talc:filename -->" title="<!-- talc:title -->">
-            <!-- talc:title -->
-          </a>
-          <span class="date">
-            <!-- talc:publish_date-->
-          </span>
-        </li>
-        <!-- talc:endfor -->
-      </ul>
+        <!-- talc:import:postlist.html -->
+      </section>
 
-      <a href="tags.html" title="See posts by tag">See posts by tag</a>
+
+      <aside>
+        <a href="tags.html" title="See posts by tag">See tags</a> &raquo;
+      </aside>
     </div>
 
     <!-- talc:import:footer.html -->
