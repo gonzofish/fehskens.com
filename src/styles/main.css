@@ -121,6 +121,10 @@ aside {
   padding: 0.75em 0.5em;
 }
 
+aside a {
+  font-style: normal;
+}
+
 article {
   margin-bottom: 10px;
 }
