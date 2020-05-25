@@ -10,7 +10,7 @@
     "lite-server": "^2.5.4"
   },
   "scripts": {
-    "build": "build:talc && node ./scripts/build.js",
+    "build": "npm run build:talc && node ./scripts/build.js",
     "build:talc": "talc build && node ./scripts/highlight-syntax.js",
     "talc": "talc",
     "start": "lite-server"
