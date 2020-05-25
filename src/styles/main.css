@@ -113,7 +113,8 @@ section > header h2 {
   pointer-events: none;
 }
 
-aside {
+aside,
+blockquote {
   background-color: rgba(0, 0, 0, 0.25);
   border-left: 0.5em solid rgba(0, 0, 0, 0.5);
   font-style: italic;
@@ -205,6 +206,32 @@ body.nightmode article > header > h2 {
 body.nightmode article > h3 {
   color: rgba(255, 255, 255, 0.9);
   font-weight: bolder;
+}
+
+.hljs.language-css::before,
+.hljs.language-html::before,
+.hljs.language-javascript::before,
+.hljs.language-js::before,
+.hljs.language-scss::before {
+  background-color: rgba(0, 0, 0, 0.85);
+  display: block;
+  font-family: sans-serif;
+  margin: -0.5em -0.5em 0.5em;
+  padding: 0.5em 0.5em 0.25em;
+  text-align: end;
+}
+.hljs.language-css::before {
+  content: "CSS";
+}
+.hljs.language-html::before {
+  content: "HTML";
+}
+.hljs.language-javascript::before,
+.hljs.language-js::before {
+  content: "JavaScript";
+}
+.hljs.language-scss::before {
+  content: "SCSS";
 }
 
 @media (max-width: 599px) {

@@ -10,11 +10,14 @@
     "lite-server": "^2.5.4"
   },
   "scripts": {
-    "build": "talc build && node ./scripts/build.js",
+    "build": "build:talc && node ./scripts/build.js",
+    "build:talc": "talc build && node ./scripts/highlight-syntax.js",
     "talc": "talc",
     "start": "lite-server"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "highlight.js": "^10.0.3",
     "talc": "^1.0.0-alpha.9"
   }
 }
