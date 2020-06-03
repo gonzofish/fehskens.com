@@ -60,7 +60,7 @@ So instead of pulling Highlight.js from a CDN and then running it on load, my si
 The steps the build process takes are:
 
 1. Compile all posts to HTML
-2. Read the HTML using `fs
+2. Read the HTML using [the `fs` module](https://nodejs.org/api/fs.html)
 3. Using Cheerio parse the post to DOM
 4. Identify all of the `pre code` blocks
 5. Run the content of those blocks through Highlight.js
