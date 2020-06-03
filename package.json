@@ -7,7 +7,8 @@
   "author": "Matt Fehskens <matt.fehskens@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.5.4",
+    "terser": "^4.7.0"
   },
   "scripts": {
     "build": "npm run build:talc && node ./scripts/build.js",

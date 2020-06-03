@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const terser = require("terser");
 
 const build = () => {
   const root = process.cwd();
@@ -10,6 +11,8 @@ const build = () => {
 
   copyDir(srcDir, outputDir);
   copyDir(talcDir, blogDir);
+
+  minifyJS(path.join(outputDir, "scripts"));
 };
 
 const copyDir = (src, dest) => {
@@ -43,6 +46,27 @@ const createDir = (dir) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
+};
+
+const minifyJS = (dir, outDir) => {
+  const files = fs.readdirSync(dir);
+  const code = {};
+
+  for (const file of files) {
+    if (path.extname(file) === ".js") {
+      const filepath = path.join(dir, file);
+
+      code[filepath] = fs.readFileSync(filepath, {
+        encoding: "utf8",
+      });
+    }
+  }
+
+  const result = terser.minify(code);
+
+  fs.writeFileSync(path.join(dir, "index.js"), result.code, {
+    encoding: "utf8",
+  });
 };
 
 if (!module.parent) {
