@@ -1,3 +1,4 @@
+const CleanCSS = require("clean-css");
 const fs = require("fs");
 const path = require("path");
 const terser = require("terser");
@@ -13,6 +14,7 @@ const build = () => {
   copyDir(talcDir, blogDir);
 
   minifyJS(path.join(outputDir, "scripts"));
+  minifyCSS(path.join(outputDir, "styles"));
 };
 
 const copyDir = (src, dest) => {
@@ -48,12 +50,40 @@ const createDir = (dir) => {
   }
 };
 
-const minifyJS = (dir, outDir) => {
+const minifyJS = (dir) => {
+  const code = readCode(dir, ".js");
+  const result = terser.minify(code);
+
+  emptyDir(dir);
+  fs.writeFileSync(path.join(dir, "index.js"), result.code, {
+    encoding: "utf8",
+  });
+};
+
+const minifyCSS = async (dir) => {
+  const cleaner = new CleanCSS({ returnPromise: true });
+  const code = readCode(dir, ".css");
+
+  for (const [filepath, contents] of Object.entries(code)) {
+    code[filepath] = { styles: contents };
+  }
+
+  try {
+    const { styles } = await cleaner.minify(code);
+
+    emptyDir(dir);
+    fs.writeFileSync(path.join(dir, "main.css"), styles, { encoding: "utf8" });
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+const readCode = (dir, ext) => {
   const files = fs.readdirSync(dir);
   const code = {};
 
   for (const file of files) {
-    if (path.extname(file) === ".js") {
+    if (path.extname(file) === ext) {
       const filepath = path.join(dir, file);
 
       code[filepath] = fs.readFileSync(filepath, {
@@ -62,11 +92,21 @@ const minifyJS = (dir, outDir) => {
     }
   }
 
-  const result = terser.minify(code);
+  return code;
+};
 
-  fs.writeFileSync(path.join(dir, "index.js"), result.code, {
-    encoding: "utf8",
-  });
+const emptyDir = (dir) => {
+  const files = fs.readdirSync(dir);
+
+  for (const file of files) {
+    const filepath = path.join(dir, file);
+
+    if (fs.statSync(filepath).isDirectory()) {
+      emptyDir(filepath);
+    } else {
+      fs.unlinkSync(filepath);
+    }
+  }
 };
 
 if (!module.parent) {

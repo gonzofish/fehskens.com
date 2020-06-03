@@ -7,6 +7,7 @@
   "author": "Matt Fehskens <matt.fehskens@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "clean-css": "^4.2.3",
     "lite-server": "^2.5.4",
     "terser": "^4.7.0"
   },
