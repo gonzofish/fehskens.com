@@ -51,10 +51,11 @@ const createDir = (dir) => {
 };
 
 const minifyJS = (dir) => {
-  const code = readCode(dir, ".js");
+  const code = fs.readFileSync(path.join(dir, "index.js"), {
+    encoding: "utf8",
+  });
   const result = terser.minify(code);
 
-  emptyDir(dir);
   fs.writeFileSync(path.join(dir, "index.js"), result.code, {
     encoding: "utf8",
   });
@@ -62,16 +63,13 @@ const minifyJS = (dir) => {
 
 const minifyCSS = async (dir) => {
   const cleaner = new CleanCSS({ returnPromise: true });
-  const code = readCode(dir, ".css");
-
-  for (const [filepath, contents] of Object.entries(code)) {
-    code[filepath] = { styles: contents };
-  }
+  const code = fs.readFileSync(path.join(dir, "main.css"), {
+    encoding: "utf8",
+  });
 
   try {
     const { styles } = await cleaner.minify(code);
 
-    emptyDir(dir);
     fs.writeFileSync(path.join(dir, "main.css"), styles, { encoding: "utf8" });
   } catch (e) {
     console.error(e);
@@ -93,20 +91,6 @@ const readCode = (dir, ext) => {
   }
 
   return code;
-};
-
-const emptyDir = (dir) => {
-  const files = fs.readdirSync(dir);
-
-  for (const file of files) {
-    const filepath = path.join(dir, file);
-
-    if (fs.statSync(filepath).isDirectory()) {
-      emptyDir(filepath);
-    } else {
-      fs.unlinkSync(filepath);
-    }
-  }
 };
 
 if (!module.parent) {
