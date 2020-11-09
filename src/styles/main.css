@@ -208,11 +208,7 @@ body.nightmode article > h3 {
   font-weight: bolder;
 }
 
-.hljs.language-css::before,
-.hljs.language-html::before,
-.hljs.language-javascript::before,
-.hljs.language-js::before,
-.hljs.language-scss::before {
+.hljs::before {
   background-color: rgba(0, 0, 0, 0.85);
   display: block;
   font-family: sans-serif;
