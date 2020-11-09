@@ -223,6 +223,9 @@ body.nightmode article > h3 {
 .hljs.language-css::before {
   content: "CSS";
 }
+.hljs.language-haskell::before {
+  content: "Haskell";
+}
 .hljs.language-html::before {
   content: "HTML";
 }
@@ -232,6 +235,9 @@ body.nightmode article > h3 {
 }
 .hljs.language-scss::before {
   content: "SCSS";
+}
+.hljs.language-shell::before {
+  content: "Shell";
 }
 
 @media (max-width: 599px) {
