@@ -359,7 +359,7 @@ That's a lot of numbers! We can still use predicates to pair that list down furt
 ```shell
 ghci> [x * y | x <- [2, 4, 6, 8], y <- [3, 5, 7, 8], mod (x * y) 4 /= 0]
 [6,10,14,18,30,42]
-````
+```
 
 You can also nest comprehensions. In the tutorial the example removes odd numbers from nested lists without flattening the list:
 
