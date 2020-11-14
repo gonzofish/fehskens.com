@@ -2,6 +2,7 @@
 title: Learning Haskell, Part 2: More on Types
 tags: learn in public,haskell,pragprog
 create_date: 2020-11-09 20:52:11
+publish_date: 2020-11-14 10:36:20
 ---
 
 > I'm learning Haskell by following [Learn You a Haskell for Great Good](http://learnyouahaskell.com/chapters). This is a series about learning something new.
