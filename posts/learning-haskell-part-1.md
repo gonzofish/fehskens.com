@@ -1,5 +1,5 @@
 ---
-title: Learning Haskell, Part 1
+title: Learning Haskell, Part 1: Starting Out
 tags: learn in public,haskell,pragprog
 create_date: 2020-11-08 09:06:41
 publish_date: 2020-11-08 19:55:11
@@ -375,4 +375,13 @@ This is the same as doing:
 ghci> evenNumbers list = [value | value <- list, even value]
 ghci> [evenNumbers sublist | sublist <- lists]
 [[2,4],[6,8],[0,2,8]]
+```
+
+## Uh, How Do I Get Out of Here?
+
+In `ghci` there are commands, that are start with a colon `:`. To quit just type `:q`:
+
+```shell
+ghci> :q
+Leaving GHCi.
 ```
