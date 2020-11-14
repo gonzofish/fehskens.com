@@ -1,5 +1,5 @@
 ---
-title: Learning Haskell, Part 2: More on Types
+title: Learning Haskell, Part 2 - More on Types
 tags: learn in public,haskell,pragprog
 create_date: 2020-11-09 20:52:11
 publish_date: 2020-11-14 10:36:20

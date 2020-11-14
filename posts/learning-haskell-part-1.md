@@ -1,5 +1,5 @@
 ---
-title: Learning Haskell, Part 1: Starting Out
+title: Learning Haskell, Part 1 - Starting Out
 tags: learn in public,haskell,pragprog
 create_date: 2020-11-08 09:06:41
 publish_date: 2020-11-08 19:55:11
