@@ -2,6 +2,7 @@
 title: Learning Haskell, Part 3 - Pattern Matching & Recursion
 tags: learn in public,haskell,pragprog
 create_date: 2020-11-14 13:11:13
+publish_date: 2020-11-14 22:42:07
 ---
 
 > I'm learning Haskell by following [Learn You a Haskell for Great Good](http://learnyouahaskell.com/chapters). This is a series about learning something new.
