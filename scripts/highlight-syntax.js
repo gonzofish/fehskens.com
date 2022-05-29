@@ -43,14 +43,49 @@ const highlightBlocks = (filepath) => {
   codes.each((_index, element) => {
     const block = $(element);
     const highlighted = hljs.highlightAuto(block.text());
+    const { class: className } = block.get(0).attribs;
+    const language = getLanguageName(className);
 
     block.empty();
     block.addClass("hljs");
     block.append(cheerio.load(highlighted.value).html());
+
+
+    if (language) {
+      block.before(
+        `<div class="language-name">${language}</div>`
+      );
+    }
   });
 
   return $.html();
 };
+
+const getLanguageName = (className = '') => {
+  const language = className.match(/language-([^\s]+)/);
+
+  if (!language) {
+    return '';
+  }
+
+  switch (language[1]) {
+    case 'css':
+      return 'CSS';
+    case 'haskell':
+      return 'Haskell';
+    case 'html':
+      return 'HTML';
+    case 'javascript':
+    case 'js':
+      return 'JavaScript';
+    case 'scss':
+      return 'SCSS';
+    case 'shell':
+      return 'Shell';
+    default:
+      return '';
+  }
+}
 
 if (!module.parent) {
   highlightSyntax();
