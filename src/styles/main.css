@@ -95,7 +95,9 @@ header label.nightmode-checkbox input[type="checkbox"] {
 
 img.gravatar {
   border-radius: 50%;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.45);
   margin-right: 5px;
+  transition: box-shadow 500ms ease;
 }
 
 section {
