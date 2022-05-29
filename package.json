@@ -7,7 +7,7 @@
   "author": "Matt Fehskens <matt.fehskens@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "clean-css": "^4.2.3",
+    "clean-css": "^5.0.0",
     "lite-server": "^2.5.4",
     "terser": "^4.7.0"
   },
@@ -18,8 +18,8 @@
     "start": "lite-server"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "highlight.js": "^10.0.3",
-    "talc": "^1.0.0-alpha.9"
+    "cheerio": "^1.0.0-rc.11",
+    "highlight.js": "^11.0.0",
+    "talc": "^1.0.0-alpha.10"
   }
 }
