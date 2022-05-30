@@ -51,6 +51,7 @@ Adding this was pretty simple and achieved with only CSS:
 
 Although it may look like a lot, all we're doing is applying a single styling to all of those `.language-*` blocks' `::before` pseudo-element. And then for each specific language type, setting the content to what we want it to say. This isn't generally good for internationalization, _but_ since we're using acronyms and proper names, it works out.
 
+> UPDATE (2022-05-30): There were some inherent problems with the above approach (namely `:before` doesn't expand if the code sample needs to scroll horizontally), so I've moved the logic of displaying the language name out from CSS using and into the build process. It's a fairly simple approach, which [can be seen in the repo](https://github.com/gonzofish/fehskens.com/blob/f295152031b166ced7d72df7cd3168ee9215f408/scripts/highlight-syntax.js#L47). The basics are that, like the CSS selector, it picks up the language from the `class` value with the `language-` prefix and then selects the correct label. That label is used in a div that is placed at the beginning of the `<pre />` and everything works as expected.
 ## Pre-Compiling
 
 One thing I've been doing with this site and blog is trying to keep processing to a minumum. The leaner the JavaScript and CSS, the faster it loads. That being said, having Highlight.js run every time a page loads seemed counter-productive.
