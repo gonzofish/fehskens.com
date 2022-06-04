@@ -8,12 +8,12 @@ module.exports = {
     directory: path.join("talc", "templates"),
     templates: [
       {
-        sortBy: ["publish_date"],
+        sortBy: ["update_date", "publish_date"],
         template: "index.html",
         type: "listing",
       },
       {
-        sortBy: ["publish_date"],
+        sortBy: ["update_date", "publish_date"],
         template: "index.html",
         transformer: transformTagLists,
         type: "listing",
