@@ -36,6 +36,11 @@ a.project {
   padding-top: 5px;
 }
 
+dl > dd {
+  margin-inline-start: 1em;
+  margin-left: 1em;
+}
+
 header.header {
   align-items: center;
   display: flex;
@@ -217,6 +222,13 @@ body.nightmode article > h3 {
   font-family: sans-serif;
   padding: 0.5em 0.5em 0.25em;
   text-align: end;
+}
+
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
 }
 
 @media (max-width: 599px) {
