@@ -42,6 +42,7 @@ const copyFile = (source, dest) => {
   const contents = fs.readFileSync(source, { encoding: "utf8" });
 
   fs.writeFileSync(dest, contents, { encoding: "utf8" });
+  console.log('> Copied from "%s" to "%s"', source, dest);
 };
 
 const createDir = (dir) => {
