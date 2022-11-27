@@ -2,6 +2,7 @@ const path = require("path");
 const transformTagLists = require("./talc/scripts/create-tag-pages");
 
 module.exports = {
+  assets: path.join("talc", "assets"),
   built: "blog-html",
   dateFormat: "M/d/yyyy hh:mm a",
   pages: {
