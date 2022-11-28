@@ -39,9 +39,7 @@ const copyDir = (src, dest) => {
 const checkIsDir = (dir) => fs.lstatSync(dir).isDirectory();
 
 const copyFile = (source, dest) => {
-  const contents = fs.readFileSync(source, { encoding: "utf8" });
-
-  fs.writeFileSync(dest, contents, { encoding: "utf8" });
+  fs.copyFileSync(source, dest);
 };
 
 const createDir = (dir) => {

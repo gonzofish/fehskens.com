@@ -176,6 +176,9 @@ article > h3 + p {
 article > p + h3 {
   margin-top: 1em;
 }
+article img {
+  max-width: 100%;
+}
 
 body.nightmode {
   background-color: rgba(0, 0, 0, 0.85);
