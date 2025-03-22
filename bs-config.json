@@ -4,7 +4,8 @@
   "server": {
     "baseDir": "src",
     "routes": {
-      "/blog": "blog-html"
+      "/blog": "blog-html",
+      "/games": "games"
     }
   }
 }

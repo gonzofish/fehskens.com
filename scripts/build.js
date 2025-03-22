@@ -9,9 +9,11 @@ const build = () => {
   const blogDir = path.join(outputDir, "blog");
   const srcDir = path.join(root, "src");
   const talcDir = path.join(root, "blog-html");
+  const creepsDir = path.join(root, "games");
 
   copyDir(srcDir, outputDir);
   copyDir(talcDir, blogDir);
+  copyDir(creepsDir, path.join(outputDir, "games"));
 
   minifyJS(path.join(outputDir, "scripts"));
   minifyCSS(path.join(outputDir, "styles"));
