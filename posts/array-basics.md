@@ -42,7 +42,7 @@ let foods = new Array();
 This works the same as using square brackets. Similarly, if we wanted to create the array with items already in it, we could do:
 
 ```javascript
-let foods = new array('onion', 'parsnip', 'green beans');
+let foods = new Array('onion', 'parsnip', 'green beans');
 ```
 
 This works like the square brackets example in the pervious section. Using `new Array()` provides one extra ability, but we'll talk about that later in the post. For now, just know that, 99 times out of 100, using square brackets is your best bet.
